@@ -2,11 +2,16 @@ package Five.CalculatorOperation;
 
 public class Operation {
 
-    public int x;
-    public int y;
+    private int x;
+    private int y;
+
+
 
     public Operation(int x, int y) {
         this.x = x;
         this.y = y;
+
     }
+
+
 }

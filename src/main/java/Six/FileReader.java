@@ -23,7 +23,7 @@ public class FileReader {
         String fileName = "C:\\Java\\myFile.txt"; //переменная для варианта с жестко прописанным путем файла (удалить 3 предыдущие строчки и в следующей заменить переменную)
         Path path = Paths.get(filePath);
         Scanner scannerFile = new Scanner(path);
-        scannerFile.useDelimiter(";| |\\s+");  //разделители слов при чтении из файла
+        scannerFile.useDelimiter(":\\s|\\s+|,|,\\s");  //разделители слов при чтении из файла
         //Прочитанный файл помещаем в ArrayList
         ArrayList<String> sortList = new ArrayList<>();
         while (scannerFile.hasNext()) {

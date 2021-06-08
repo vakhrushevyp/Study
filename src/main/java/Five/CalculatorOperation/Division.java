@@ -1,14 +1,20 @@
 package Five.CalculatorOperation;
 
 public class Division extends Operation {
+    private int z;
+
+
     public Division(int x, int y) {
         super(x, y);
-        try {
-            System.out.println(x / y);
-        } catch (ArithmeticException e) {
-            System.out.println("Ошибка деления на 0!");
-        }
+        this.z = x / y;
 
 
     }
+   
+    public Object getResult() {
+         return z;
+        }
+
+        
+
 }

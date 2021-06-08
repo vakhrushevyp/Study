@@ -1,10 +1,10 @@
 package Five;
 
-
 import Five.CalculatorOperation.Division;
 import Five.CalculatorOperation.Plus;
 import Five.CalculatorOperation.Minus;
 import Five.CalculatorOperation.Multiplication;
+import Five.CalculatorOperation.Operation;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -31,19 +31,25 @@ public class Calculator {
             System.out.println("Вы ввели неправильное число!");
             return;
         }
-
         switch (operator) {
             case "+":
-                new Plus(x, y);
+                System.out.println(new Plus(x,y).getResult());
                 break;
+
             case "-":
-                new Minus(x, y);
+                System.out.println(new Minus(x,y).getResult());
                 break;
             case "*":
-                new Multiplication(x, y);
+                System.out.println(new Multiplication(x,y).getResult());
                 break;
             case "/":
-                new Division(x, y);
+                try {
+                    System.out.println(new Division(x,y).getResult());
+                }
+                catch (ArithmeticException e) {
+                    System.out.println("Ошибка деления на 0!");
+                }
+
                 break;
             default:
                 System.out.println("Введенный знак не распознан, нужно ввести один из символов: +,-,/,*");
